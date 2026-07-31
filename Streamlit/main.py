@@ -6,6 +6,13 @@ sl.subheader("I am a Subheader")
 sl.header("I am a header")
 sl.text("I am a text")
 
+# agar hamburger wagera ya footer ho toh visibility hidden krdo
+# sl.markdown("""
+# <style>
+
+# </style>
+# """)
+
 sl.markdown("___")
 
 sl.code('''
@@ -81,3 +88,25 @@ df = pd.DataFrame({"column1": [1,2,3,4], "column2": [5,6,7,8]})
 
 sl.table(df)
 sl.dataframe(df)
+
+# CheckBox, Radio, Select Box Practice Here
+
+def change():
+    print(sl.session_state.checker)
+
+state = sl.checkbox("CheckBox", value = True, key = "checker", on_change = change) 
+
+radio = sl.radio("In which country do you live?", options = ("Pakistan","Spain","Palestine"), key = "radios")
+
+print(radio)
+
+def btn_change():
+    print("Button Clicked")
+  
+btn = sl.button("Click Me", on_click = btn_change)
+
+select_box = sl.selectbox("What is your favourite car?", options = ("BMW", "Ferrari", "Mercedes"))
+print(select_box)
+
+multi_select_box = sl.multiselect("What is your favourite food?", options = ("Pasta", "Afghani Boti", "Malai Boti"))
+print(multi_select_box)
