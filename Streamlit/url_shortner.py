@@ -2,6 +2,9 @@ import streamlit as sl
 import pyshorteners as pst
 import pyperclip
 
+with open("designing.css") as csss:
+    sl.markdown(f"<style>{csss.read()}</style>", unsafe_allow_html=True)
+
 shortener = pst.Shortener()
 
 sl.markdown("<h1 style='text-align: center;'>URL SHORTENER</h1>", unsafe_allow_html=True)
