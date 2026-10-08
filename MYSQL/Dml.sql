@@ -42,3 +42,5 @@ UPDATE EMPLOYEES SET EMP_ID = '3' WHERE EMP_NAME = 'Sameen Zaki';
 UPDATE EMPLOYEES SET EMP_ID = '3', MANAGER_NAME = "Tabloo Manager" WHERE EMP_NAME = 'Sameen Zaki';
 
 UPDATE employees SET emp_id = emp_id + 2 where emp_id = 2;
+
+delete from employees where emp_id = 4;
